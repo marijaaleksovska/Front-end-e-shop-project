@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link  rel="stylesheet" href="./style/style.css" type="text/css">
+    <title></title>
+  </head>
+  <body>
+    <nav class=" navbar-expand-lg navbar navbar-dark bg-dark" style="width: 100%;">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="width: 100%;margin-right: 8%;">
+            <div style="color: rgba(245, 245, 245, 0.815);">Free shipping for standard order over $100 </div>
+           
+          </div>
+      </nav>
+      <nav class="navbar navbar-light bg-light sticky-top" id="nav" style="width: 100%;z-index: 1;" >
+          <div id="container" style="width: 100%;">
+              <div id="logo" style="align-self: center; width: 20%;"><a href="index1.html"><img src="./images/logo-01.png"></a></div>
+              <div id="child-container" style="width: 40%; ">
+
+                    <nav class="navbar navbar-light bg-light" id="nav1">
+                        <form class="form-inline">
+                            <button class="btn" type="button"><a href="index1.html" style="text-decoration: none;">Home</a></button>
+                            <button class="btn " type="button"><a href="shop1.html" style="text-decoration: none;">Shop</a></button>
+                            <!-- <button class="btn" type="button"><a href="#" style="text-decoration: none;">Blog</a></button> -->
+                            <button class="btn " type="button"><a href="about1.html" style="text-decoration: none;">About</a></button>
+                            <button class="btn " type="button"><a href="contact1.html" style="text-decoration: none;">Contact</a></button>
+
+                          </form>
+                      </nav>
+                </div>
+              <div id="containerSC" style="width: 40%;">
+                <div>
+                  <form class="form-inline search">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search">
+                      <!-- <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button> -->
+                      <!-- <input type="submit" class="searchBtn" value> -->
+                      <img src="https://img.icons8.com/cotton/64/000000/search--v2.png" id="searchImg">
+                      
+                    </form>
+                </div>
+
+                <div>
+                    <div class="btn-group">
+                        <button id="loginName" class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:darkslategrey; font-weight: bold; border: 1px solid gray;">
+                          
+                        </button>
+                        <div class="dropdown-menu" style="z-index: 10;">
+                          
+                          <a class="dropdown-item" href="#" id="wishList">My Wishlist</a>
+                          <a class="dropdown-item" href="card.html">My Card</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="index.html" id="singup">Sing up</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+          </div>
+        
+      </nav>
+      <div id="cardDiv">
+          <div id="cardTittle">SHOPPING CART</div>
+          <div id="cardTable">
+              <div id="tableC" class="table-responsive" style=" width: 65%;">
+                <table class="table" style=" border:1px solid #ddd; width: 100%;font-family: 'Poppins', sans-serif;">
+                    <thead>
+                        <th>PRODUCT</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>TOTAL</th>
+                        <th></th>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                    <tfoot style=" border:1px solid #ddd; width: 100%;font-family: 'Poppins', sans-serif;">
+                        <tr>
+                            <td colspan="4"><small>*If you want to change the quantity double click on the number.</small></td>
+                            
+                            <td><button id="updateBtn" type="button" class="btn btn-dark">Update Table</button></td></tr>
+                    </tfoot>
+                  </table>
+              </div>
+              <div id="total" style="color: rgb(66, 68, 70);">
+                  <div style="border-bottom: 1px dashed #d9d9d9; ">
+                      <div style="font-size: 23px; font-weight: bolder;margin-bottom: 10px;">CART TOTALS</div>
+                      <div style="display: flex;flex-direction: row; margin-bottom: 10px;font-size: 20px;font-family: 'Poppins', sans-serif;">
+                          <div style="margin-right: 20px;font-weight: bold;">Subtotal:</div>
+                          <div id="subtotal-prize"></div>
+                      </div>
+                  </div>
+                  <div style="display: flex;flex-direction: row;font-family: 'Poppins', sans-serif;border-bottom: 1px dashed #d9d9d9;">
+                    <div style="margin-right: 20px;font-size: 20px;font-weight: bold;">Shipping:</div>
+                    <div>
+                    <div style="margin-bottom: 10px;">There are no shipping methods available. Please double check your address, or contact us if you need any help.</div>
+                    <div style="font-weight: bold;margin-bottom: 10px;">CALCULATE SHIPPING</div>
+                    <div style="display: flex; justify-content: space-around;flex-direction: column;">
+                        <select placeholder="Select a country" style="width: 100%;padding: 5px;">
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                        <br>
+                        <input type="text" placeholder="State/Country" style="width: 100%;padding: 5px;">
+                        <br>
+                        <input type="text" placeholder="Postcode/Zip" style="width: 100%;padding: 5px;">
+                        <br>
+                        </div><button id="updateTotal" type="button" class="btn btn-light " style="border: 1px solid  #d9d9d9; border-radius: 20px;width: 80%;padding: 5px; margin-bottom: 20px;">UPDATE TOTALS</button></div>
+                  </div>
+
+                  <div>
+                    <div style="font-weight: bold; display: flex;flex-direction: row; margin-bottom: 20px;font-size: 20px;font-family: 'Poppins', sans-serif;">
+                        <div style="margin-right: 20px;width: 30%;">Total:</div>
+                        <div id="total-prize"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-dark" style="width: 100%;border-radius: 20px;padding: 10px;font-weight: bold;">PROCEED TO CHECKOUT</button>
+                  </div>
+
+              </div>     
+          </div>
+
+      </div >
+
+    
+    <script src="./scripts/card.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  <footer style="width: 100%; height: 400px; background-color: rgb(29, 29, 29);"  id="footer">
+    <div id="container1">
+        <div id="categories">
+            <div><h5 style="color: white;">CATEGORIES</h5></div>
+            <div><a href="#" style="color:grey;">Women</a></div>
+            <div><a href="#" style="color:grey;">Men</a></div>
+            <div><a href="#" style="color:grey;">Shoes</a></div>
+            <div><a href="#" style="color:grey;">Watches</a></div>
+
+        </div>
+        <div id="help">
+            <div><h5 style="color: white;">HELP</h5></div>
+            <div><a href="#" style="color:grey;">Track Order</a></div>
+            <div><a href="#" style="color:grey;">Returns</a></div>
+            <div><a href="#" style="color:grey;">Shipping</a></div>
+            <div><a href="#" style="color:grey;">FAQs</a></div>
+        </div>
+        <div id="getInTouch">
+            <div><h5 style="color: white;">GET IN TOUCH</h5></div>
+            <div>
+                <p style="color:grey;">Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879</p>
+            </div>
+            
+        </div>
+        <div id="newsletter">
+            <div><h5 style="color: white;">NEWSLETTER</h5></div>
+            <div><input id="mail" type="email" style="padding: 3px; background-color:  rgb(29, 29, 29) ; color: white; border: none; border-bottom: solid 1px whitesmoke;" placeholder="email@example.com"></div>
+            <div>
+                <div id="sub" >
+                    SUBSCRIBE
+                </div>
+                
+            </div>
+
+
+        </div>
+
+    </div>
+    <div id="container2">
+        <div id="icons">
+            <div><img src="./images/icon-pay-01.png"></div>
+            <div><img src="./images/icon-pay-02.png"></div>
+            <div><img src="./images/icon-pay-03.png"></div>
+            <div><img src="./images/icon-pay-04.png"></div>
+            <div><img src="./images/icon-pay-05.png"></div>
+
+        </div>
+        <div id="p">
+            <p>
+                Copyright ©2020 All rights reserved 
+            </p>
+        </div>
+
+    </div>
+  
+</footer>
+  
+</html>
